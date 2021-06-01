@@ -40,16 +40,16 @@ COPY app-config.yaml app-config.heroku.yaml ./
 
 ENV PORT 7000
 
-ENV GITHUB_PRODUCTION_CLIENT_ID ""
-ENV GITHUB_PRODUCTION_CLIENT_SECRET ""
+ENV GITHUB_PRODUCTION_CLIENT_ID "3e217528b5b505d5f815"
+ENV GITHUB_PRODUCTION_CLIENT_SECRET "7ba3b6af22960f0e115fc521cfad5f6330792ce6"
 
-ENV GITHUB_DEVELOPMENT_CLIENT_ID ""
-ENV GITHUB_DEVELOPMENT_CLIENT_SECRET ""
+ENV GITHUB_DEVELOPMENT_CLIENT_ID "3e217528b5b505d5f815"
+ENV GITHUB_DEVELOPMENT_CLIENT_SECRET "e30660c041bd3fefa3763167d6b424cb12e519a6"
 
 # For now we need to manually add these configs through environment variables but in the
 # future, we should be able to fetch the frontend config from the backend somehow
-ENV APP_CONFIG_app_baseUrl "https://demo.backstage.io"
-ENV APP_CONFIG_backend_baseUrl "https://demo.backstage.io"
+ENV APP_CONFIG_app_baseUrl "http://localhost:7000"
+ENV APP_CONFIG_backend_baseUrl "http://localhost:7000"
 ENV APP_CONFIG_auth_environment "production"
 
 CMD ["node", "packages/backend", "--config", "app-config.yaml", "--config", "app-config.heroku.yaml"]

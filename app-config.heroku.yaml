@@ -1,8 +1,8 @@
 app:
-  baseUrl: https://demo.backstage.io
+  baseUrl: http://localhost:7000
 
 backend:
-  baseUrl: https://demo.backstage.io
+  baseUrl: http://localhost:7000
   listen:
     port:
       $env: PORT
@@ -24,7 +24,7 @@ techdocs:
   generators:
     techdocs: local
   publisher:
-    type: 'googleGcs'
+    type: 'local'
     googleGcs:
       credentials:
         $env: TECHDOCS_GCS_CREDENTIALS
